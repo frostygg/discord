@@ -52,7 +52,8 @@ client.on('ready', async () => {
 client.registry
     .registerDefaultTypes()
     .registerGroups([
-        ['teams', 'Penguin Games teams']
+        ['teams', 'Penguin Games teams'],
+        ['moderator', 'Moderator commands']
     ])
     .registerDefaultGroups()
     .registerDefaultCommands({help: true})

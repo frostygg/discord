@@ -9,7 +9,6 @@ module.exports = class JoinCommand extends Commando.Command {
             group: 'teams',
             memberName: 'stats',
             description: 'Checks team stats.',
-            guildOnly: true,
             throttling: {
                 usages: 1,
                 duration: 10
@@ -17,9 +16,9 @@ module.exports = class JoinCommand extends Commando.Command {
         });
     }
 
-    async run(msg, { team }) {
-        let blueCount = await globals.db.query("select count(*) from penguin_item where item_id = 34241");
-        let redCount = await globals.db.query("select count(*) from penguin_item where item_id = 34242");
+    async run(msg) {
+        let blueCount = await globals.db.query("select count(*) from penguin_item where item_id = 34241;");
+        let redCount = await globals.db.query("select count(*) from penguin_item where item_id = 34242;");
         blueCount = blueCount.rows[0] //first 0: first row, 2nd 0: first column (the count)
         redCount = redCount.rows[0]
 
