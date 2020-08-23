@@ -1,14 +1,14 @@
 {
-  "name": "teambot",
+  "name": "frosty-discord",
   "version": "1.0.0",
-  "description": "Team selecting bot for the penguin games",
+  "description": "discord bot for the Frosty discord. fork of teambot",
   "main": "entry.js",
   "scripts": {
     "start": "node ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frostygg/teambot"
+    "url": "git+https://github.com/frostygg/discord"
   },
   "keywords": [
     "frostygg"
@@ -16,9 +16,9 @@
   "author": "daniel11420 / the Frosty team",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://github.com/frostygg/teambot/issues"
+    "url": "https://github.com/frostygg/discord/issues"
   },
-  "homepage": "https://github.com/frostygg/teambot#readme",
+  "homepage": "https://github.com/frostygg/discord#readme",
   "dependencies": {
     "@types/better-sqlite3": "^5.4.0",
     "@types/node": "^14.0.5",
