@@ -27,6 +27,7 @@
     "discord.js-commando": "github:discordjs/Commando",
     "figlet": "^1.4.0",
     "fs": "0.0.1-security",
+    "pg": "^8.3.2",
     "sqlite": "^4.0.8",
     "sqlite3": "^5.0.0",
     "table": "^5.4.6",

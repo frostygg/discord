@@ -6,7 +6,16 @@ import * as sqlite from 'sqlite';
 import { table } from 'table';
 import * as figlet from 'figlet';
 import * as package_json from './package.json';
+import * as pg from 'pg';
 let name = package_json.name;
+
+globals.db = new pg.Pool({
+    user: config.houdini.username,
+    password: config.houdini.password,
+    host: config.houdini.host,
+    database: config.houdini.database,
+    port: config.houdini.port
+});
 
 var client: Commando.CommandoClient = new Commando.CommandoClient(
     {

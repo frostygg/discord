@@ -6,6 +6,8 @@ let fs = require('fs');
 declare var config;
 config = fs.readFileSync('./local/config.json');
 config = JSON.parse(config);
+declare var globals;
+globals = [];
 
 if (config.config_version == required_config_version) {
     console.log("Config version correct, starting.");
