@@ -31,24 +31,29 @@ module.exports = class AnnounceCommand extends Commando.Command {
         });
     }
 
-    async run(msg, { ping, message }) {
+    async run(msg: Commando.CommandoMessage, { ping, message }) {
         if (msg.member.roles.cache.has(config.roles.lv2) == true) {
             let embed = new Discord.MessageEmbed()
                 .setDescription(message)
                 .setTimestamp(Date.now());
             if (msg.attachments.size != 0) {
-                embed.setImage(msg.attachments.first().attachment);
+                embed.setImage(msg.attachments.first().attachment.toString());
             }
-            msg.delete();
 
+            let response;
             switch(ping) {
                 case '--no':
-                    return msg.channel.send(embed);
+                    response = await msg.channel.send(embed);
+                    break;
                 case '--everyone':
-                    return msg.channel.send('@everyone', embed);
+                    response = await msg.channel.send('@everyone', embed);
+                    break;
                 case '--here':
-                    return msg.channel.send('@here', embed);
+                    response = await msg.channel.send('@here', embed);
+                    break;
             }
+            msg.delete();
+            return response;
         } else {
             return msg.reply("you don't have permission to announce.")
         }
