@@ -1,6 +1,6 @@
 {
   "name": "frosty-discord",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "discord bot for the Frosty discord. fork of teambot",
   "main": "entry.js",
   "scripts": {

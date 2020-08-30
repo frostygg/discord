@@ -2,7 +2,7 @@ import * as ct from 'common-tags';
 import * as Commando from 'discord.js-commando';
 import { Message } from 'discord.js';
 
-module.exports = class JoinCommand extends Commando.Command {
+module.exports = class StatsCommand extends Commando.Command {
     constructor(client) {
         super(client, {
             name: 'stats',

@@ -26,7 +26,7 @@ module.exports = class JoinCommand extends Commando.Command {
     }
 
     async run(msg, { team }) {
-        if (msg.member.roles.cache.has(config.roles.red) == false &&
+        /*if (msg.member.roles.cache.has(config.roles.red) == false &&
             msg.member.roles.cache.has(config.roles.blue) == false)
         {
             switch(team) {
@@ -39,6 +39,7 @@ module.exports = class JoinCommand extends Commando.Command {
             }
         } else {
             return msg.reply("You are already in a team!");
-        }
+        }*/
+        return msg.reply("you can no longer join teams.")
     }
 }

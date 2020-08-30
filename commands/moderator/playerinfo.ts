@@ -3,7 +3,7 @@ import * as Commando from 'discord.js-commando';
 import { Message } from 'discord.js';
 import { stringify } from 'querystring';
 
-module.exports = class JoinCommand extends Commando.Command {
+module.exports = class PlayerInfoCommand extends Commando.Command {
     constructor(client) {
         super(client, {
             name: 'playerinfo',
